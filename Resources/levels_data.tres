@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="LevelsDataResource" load_steps=7 format=3 uid="uid://b8jgsvym5iu53"]
+
+[ext_resource type="Script" uid="uid://dynhgvukju7tr" path="res://Classes/levelsdataresource.gd" id="1_o0sab"]
+[ext_resource type="Script" uid="uid://dtotq6h1285ea" path="res://Classes/level_setting_resource.gd" id="2_6cewc"]
+
+[sub_resource type="Resource" id="Resource_o0sab"]
+script = ExtResource("1_o0sab")
+lvl_number = 1
+rows = 4
+cols = 1
+metadata/_custom_type_script = "uid://dynhgvukju7tr"
+
+[sub_resource type="Resource" id="Resource_6cewc"]
+script = ExtResource("1_o0sab")
+lvl_number = 2
+rows = 3
+cols = 4
+metadata/_custom_type_script = "uid://dynhgvukju7tr"
+
+[sub_resource type="Resource" id="Resource_yohw0"]
+script = ExtResource("1_o0sab")
+lvl_number = 3
+rows = 4
+cols = 4
+metadata/_custom_type_script = "uid://dynhgvukju7tr"
+
+[sub_resource type="Resource" id="Resource_0amg5"]
+script = ExtResource("1_o0sab")
+lvl_number = 4
+rows = 4
+cols = 6
+metadata/_custom_type_script = "uid://dynhgvukju7tr"
+
+[resource]
+script = ExtResource("2_6cewc")
+levels = Array[ExtResource("1_o0sab")]([SubResource("Resource_o0sab"), SubResource("Resource_6cewc"), SubResource("Resource_yohw0"), SubResource("Resource_0amg5")])
+metadata/_custom_type_script = "uid://dtotq6h1285ea"
