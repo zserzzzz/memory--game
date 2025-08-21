@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://741hnf0mo338"]
+
+[ext_resource type="LabelSettings" uid="uid://eq8is8e1nxap" path="res://assets/Styles/red_big_shadow.tres" id="1_1r6ip"]
+[ext_resource type="PackedScene" uid="uid://bvs2unqtpdgbq" path="res://Scenes/LevelButton/level_button.tscn" id="2_lixft"]
+
+[node name="MAIN" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.141043, 0.37143, 1, 0.180392)
+
+[node name="VB" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "
+MEMORY MADNESS"
+label_settings = ExtResource("1_1r6ip")
+
+[node name="ButtonsHB" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="LevelButton" parent="VB/ButtonsHB" instance=ExtResource("2_lixft")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="LevelButton2" parent="VB/ButtonsHB" instance=ExtResource("2_lixft")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+level_number = 2
+
+[node name="LevelButton3" parent="VB/ButtonsHB" instance=ExtResource("2_lixft")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+level_number = 3
+
+[node name="LevelButton4" parent="VB/ButtonsHB" instance=ExtResource("2_lixft")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+level_number = 4
+
+[node name="SpritesHB" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpbp42f64vj76"]
+[gd_scene load_steps=4 format=3 uid="uid://cpbp42f64vj76"]
 
 [ext_resource type="Texture2D" uid="uid://c1y4g2gdrvnyp" path="res://assets/images/backgroundEmpty.png" id="1_w1n7p"]
+[ext_resource type="AudioStream" uid="uid://x7iychib6aj5" path="res://assets/sounds/bgm_action_3.mp3" id="2_a4gx0"]
+[ext_resource type="PackedScene" uid="uid://741hnf0mo338" path="res://Scenes/Main/main.tscn" id="3_vq23j"]
 
 [node name="Master" type="Control"]
 layout_mode = 3
@@ -21,3 +23,9 @@ texture = ExtResource("1_w1n7p")
 expand_mode = 1
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_a4gx0")
+volume_db = -8.845
+autoplay = true
+
+[node name="MAIN" parent="." instance=ExtResource("3_vq23j")]
+layout_mode = 1

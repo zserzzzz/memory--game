@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvs2unqtpdgbq"]
+
+[ext_resource type="Texture2D" uid="uid://2o63k8msk1fd" path="res://assets/ui/level_select_frame_128.png" id="1_2b86x"]
+[ext_resource type="Texture2D" uid="uid://ba6mebh1ldavi" path="res://assets/ui/level_select_frame_hover_128.png" id="2_6j25p"]
+[ext_resource type="Texture2D" uid="uid://d126dgyhl84tt" path="res://assets/ui/level_select_frame_select_128.png" id="3_f7y0e"]
+[ext_resource type="Script" uid="uid://ljx4y1ltj7og" path="res://Scripts/LevelButton/level_button.gd" id="4_6j25p"]
+[ext_resource type="FontFile" uid="uid://byglf6x622oef" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="4_wwoil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4dypi"]
+font = ExtResource("4_wwoil")
+font_size = 48
+outline_size = 4
+outline_color = Color(0.233925, 0.233925, 0.233925, 1)
+
+[node name="LevelButton" type="TextureButton"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+button_mask = 7
+texture_normal = ExtResource("1_2b86x")
+texture_pressed = ExtResource("2_6j25p")
+texture_hover = ExtResource("3_f7y0e")
+script = ExtResource("4_6j25p")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "0x0"
+label_settings = SubResource("LabelSettings_4dypi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
